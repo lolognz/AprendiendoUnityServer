@@ -323,6 +323,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SCRIPTS\CargandoImagenURL.cs" />
+    <Compile Include="Assets\SCRIPTS\EnviaRecibeDatosWeb.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
