@@ -4,3 +4,14 @@ Devuelve el nombre posteado con anterioridad. Como en este caso no hacemos conex
 */
 echo 'Blaster';
 ?>
+<html>
+    <head>
+        <title>Conexión a la Base de Datos</title>
+    </head>
+<body>
+	<br/>
+ 	<a href="index.php">Inicio</a> 
+ 	<br/>
+ 	<a href="postName.php">Post Name</a>
+</body>
+</html>
