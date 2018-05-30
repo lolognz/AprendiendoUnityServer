@@ -3,16 +3,20 @@
 include ("includes/conexion.php");
 
 //Cogemos el valor de las variables que nos envía Unity
-$name = $_GET['nombre'];
-$surname = $_GET['apellido'];
+$name = isset($_GET['nombre']) ? $_GET['nombre'] : '';
+$surname = isset($_GET['apellido']) ? $_GET['apellido'] : '';
 
 //Mostramos el valor por la consola
 echo 'nombre recibido: ' .$name;
 echo 'apellido recibido: ' .$surname;
 
 //Insertamos valores en la base de datos
-$stmt = $db->prepare("INSERT INTO jugador(nombre, apellido) VALUES(:field1, :field2)");
-$stmt->execute(array(':field1' => $name, ':field2' => $surname));
+$stmt = "INSERT INTO jugador(nombre,apellido) VALUES('$name','$surname')";
+if (mysqli_query($db, $stmt)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $stmt . "<br>" . mysqli_error($db);
+}
 
 //Para comprobar la introducción desde la página a modo LOG, mostramos los datos de la BD
 foreach($db->query('SELECT * FROM jugador') as $row){

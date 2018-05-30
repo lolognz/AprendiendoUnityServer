@@ -2,21 +2,15 @@
 //Incluimos el archivo para conectar
 include ("includes/conexion.php");
 
-$nombre = $_GET['nombre'];
+$sql = "SELECT nombre, apellido FROM jugador";
+$result = $db->query($sql);
 
-//Para mostrar los resultados...
-foreach($db->query("SELECT nombre, apellido FROM jugador WHERE nombre = 'nombre'") as $row){
-	echo $row['nombre'].' '.$row['apellido']; //etc
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_row($result)) {
+        echo $row[0]. "  " . $row[1]. "\n";
+    }
+} else {
+    echo "0 results";
 }
 ?>
-<html>
-    <head>
-        <title>Conexión a la Base de Datos</title>
-    </head>
-<body>
-	<br/>
- 	<a href="index.php">Inicio</a> 
- 	<br/>
- 	<a href="postNameBD.php">Post Name</a>
-</body>
-</html>

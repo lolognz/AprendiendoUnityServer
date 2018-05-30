@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{18353963-8485-FB36-C791-96733296F4EE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SCRIPTS/EnviaRecibeDatosWeb.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SCRIPTS/EscribeRecibeBD.cs">
     <Files>
       <File FileName="Assets/SCRIPTS/CargandoImagenURL.cs" Line="26" Column="11" />
-      <File FileName="Assets/SCRIPTS/EnviaRecibeDatosWeb.cs" Line="46" Column="45" />
-      <File FileName="Assets/SCRIPTS/EscribeRecibeBD.cs" Line="1" Column="1" />
+      <File FileName="Assets/SCRIPTS/EnviaRecibeDatosWeb.cs" Line="67" Column="1" />
+      <File FileName="Assets/SCRIPTS/EscribeRecibeBD.cs" Line="61" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

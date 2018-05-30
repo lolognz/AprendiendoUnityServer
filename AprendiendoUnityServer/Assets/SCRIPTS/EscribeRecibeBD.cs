@@ -38,12 +38,12 @@ public class EscribeRecibeBD : MonoBehaviour
 
         //Mostrar datos de retorno aquí
         string urlString = getUrlBD + "?" + "nombre=" + WWW.EscapeURL(_nombre);
-        WWW getName = new WWW(getUrlBD);
+        WWW getNameBD = new WWW(getUrlBD);
 
         //Esperamos hasta que haya una respuesta
-        yield return getName;
-        resultadoMostradoBD.text = getName.text;
-        Debug.Log(getName.text);
+        yield return getNameBD;
+        resultadoMostradoBD.text = getNameBD.text;
+        Debug.Log(getNameBD.text);
     }
 
     private IEnumerator SaveName()
@@ -53,16 +53,16 @@ public class EscribeRecibeBD : MonoBehaviour
         _nombre = nombreIntroducidoBD.text;
         _apellido = apellidoIntroducidoBD.text;
         //Utilizamos WWW.EscapeURL por seguridad, funcionaría sin, pero así es más seguro
-        string urlString = postUrlBD + "?" + "name=" + WWW.EscapeURL(_nombre) + "&" + "apellido=" + WWW.EscapeURL(_apellido);
+        string urlString = postUrlBD + "?" + "nombre=" + WWW.EscapeURL(_nombre) + "&" + "apellido=" + WWW.EscapeURL(_apellido);
 
         Debug.Log("sending " + urlString);
 
         //Mandamos aquí los datos
-        WWW postName = new WWW(urlString);
+        WWW postNameBD = new WWW(urlString);
 
-        yield return postName;
+        yield return postNameBD;
         mensajeEnviadoBD.text = "Datos recibidos correctamente";
-        Debug.Log(postName.text);
+        Debug.Log(postNameBD.text);
     }
 
     // Use this for initialization
