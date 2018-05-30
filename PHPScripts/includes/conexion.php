@@ -1,5 +1,6 @@
 <?php
-$db = new PDO('mysql:host=localhost; dbname=pruebasunity; charset=utf8', 'adminUnity', 'admin');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+$db = mysqli_connect("localhost", "adminUnity", "admin", "pruebasunity");
+if ($db->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
+}
 ?>

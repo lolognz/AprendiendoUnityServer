@@ -7,7 +7,5 @@ include ("includes/conexion.php");
     </head>
 <body>
  	<a href="postNameBD.php">Post Name</a> 
- 	<br/>
- 	<a href="getNameBD.php">Get Name</a>
 </body>
 </html>
